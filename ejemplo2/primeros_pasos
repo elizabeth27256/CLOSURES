@@ -1,0 +1,7 @@
+function crearCajaFuerte(clave) {
+  // Tu código aquí
+}
+
+const caja = crearCajaFuerte("1234");
+console.log(caja("1234")); // "Acceso concedido"
+console.log(caja("0000")); // "Acceso denegado"
