@@ -5,9 +5,9 @@ const app = express();
 const PORT = 3000;
  
 // 🔐 CLOSURE: función que guarda el nombre por defecto del Pokémon
-function crearRutaPokemon(nombrePorDefecto) {
+function crearRutaPokemon(nombrePokemon) {
   return async function (req, res) {
-    const nombre = req.params.nombre || nombrePorDefecto;
+    const nombre = req.params.nombre || nombrePokemon;
  
     try {
       const respuesta = await axios.get(`https://pokeapi.co/api/v2/pokemon/${nombre}`);
